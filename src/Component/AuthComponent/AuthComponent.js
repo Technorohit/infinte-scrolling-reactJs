@@ -10,8 +10,6 @@ export default function AuthComponent(props) {
     const [password, setPassword] = useState('');
     const [errorState, setErrorState] = useState(false);
    
-
-console.log("props",props.history)
     const loginHandler = () => {
         if (userName === "foo" && password === "bar") {
             console.log("login Success")
@@ -28,7 +26,7 @@ console.log("props",props.history)
         }
     }
 
-
+console.log("value: ",userName)
     return (
         <div className="login-container">
             <div className="welcome-text">Welcome Back !!!</div>
@@ -37,7 +35,7 @@ console.log("props",props.history)
                 <br />
                 <input type="password" onChange={e => setPassword(e.target.value)} placeholder="PASSWORD" />
                 <br />
-                <button type="submit" onClick={loginHandler} >Login</button>
+                <button type="submit" data-testid="login-cta" onClick={loginHandler} >Login</button>
             </div>
             {errorState ? 'Oops wrong password Entered, pls try again' : ''}
         </div>

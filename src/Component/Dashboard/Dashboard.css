@@ -1,5 +1,5 @@
 .dashboard-container{
-    width: fit-content;
+    width: 100%;
 }
 nav{
     border: 1px solid saddlebrown;
@@ -8,19 +8,18 @@ nav{
     justify-content: space-between;
     padding: 0px 20px 0px 100px;
     align-items: center;
-    
+    width: 100vw;
 }
 .title{
     color: aliceblue;
     font-size: 24px;
 }
-.user-img{
+/* .user-img{
     width: 200px;
     height: 200px;
-}
+} */
 .user-img img{
     height: 180px;
-
 }
 .user-info{
   font-weight: 600;
@@ -29,3 +28,35 @@ nav{
     margin: 15px;
     font-family: 'Montserrat', sans-serif;
 }
+@media screen and (min-width: 320px) {
+    nav{
+        width: 100vw;
+        overflow-y: hidden;
+        padding: 0px 20px ;
+      
+    }
+    .title,.logout_cta{
+        font-size: 14px;
+        width: fit-content;
+    }
+   .container-box{
+       width: 360px;
+       max-width: 380px;
+       border: 1px solid black;
+       height: 20vh;
+       display: flex;
+       margin: 10px auto;
+   }
+.user-img img{
+    height: 80px;
+    margin:10px
+}
+.user-info{
+    font-weight: 600;
+    font-size: 10px;
+      text-align: left;
+      height: 5px;
+      margin: 5px;
+      font-family: 'Montserrat', sans-serif;
+  }
+  }

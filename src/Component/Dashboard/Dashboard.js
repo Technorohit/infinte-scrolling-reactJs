@@ -11,7 +11,6 @@ export default function Dashboard(props) {
     const [data, setData] = useState([]);
     const [isReady,setReady]=useState(false)
 
-    console.log("getUser()", getUser())
     if (getUser() === false) {
         setTimeout(() => {
             navigate('/')
@@ -26,13 +25,14 @@ export default function Dashboard(props) {
     useEffect(() => {
         setDataFetching(true)
         const TestUrl='http://demo8597236.mockable.io/';
-        const githun=`https://api.github.com/users?since=${currentPage*10}&per_page=10`
+        //deployed the custom response on above 3rd party api service because of github 60request per hour limitation
+       // you can replace the github to test the pagination 
+        const github=`https://api.github.com/users?since=${currentPage*10}&per_page=10`
       //as instructed timeout will run for 1 sec
       setTimeout(()=>{
         fetch(TestUrl).then(res =>
             res.json()
           ).then(data1=>{
-            console.log(data1)
             setReady(true)
            setData(state=>[...state,...data1])
            setDataFetching(false)
@@ -42,7 +42,7 @@ export default function Dashboard(props) {
 
 const UserInfo=(user)=>{
     return(
-        <div className="container">
+        <div className="container-box">
         <div className="user-img">
             <img src={user.avatar_url||''} alt=""/>
         </div>

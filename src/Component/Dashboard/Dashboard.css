@@ -1,0 +1,31 @@
+.dashboard-container{
+    width: fit-content;
+}
+nav{
+    border: 1px solid saddlebrown;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px 0px 100px;
+    align-items: center;
+    
+}
+.title{
+    color: aliceblue;
+    font-size: 24px;
+}
+.user-img{
+    width: 200px;
+    height: 200px;
+}
+.user-img img{
+    height: 180px;
+
+}
+.user-info{
+  font-weight: 600;
+    text-align: left;
+    height: 15px;
+    margin: 15px;
+    font-family: 'Montserrat', sans-serif;
+}

@@ -1,0 +1,54 @@
+.container{
+    width: 900px;
+    border: 1px solid grey;
+    height: 200px;
+    margin: 10px auto;
+    display: flex;
+    border-radius: 10px;
+    
+}
+.img-container{
+    width: 200px;
+    height: 200px;
+    border: 1px solid grey;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.5) 60%,
+        rgba(255, 255, 255, 0) 90%
+      ),
+      lightgray;
+      background-position: 0 0;
+   background-repeat: repeat-y;
+  background-size: 50px 500px;
+
+
+    animation: shine 1.5s infinite;	
+
+}
+.user-info{
+     margin: 22px;
+     
+}
+.skeleton-lines{
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.7) 10%,
+      rgba(255, 255, 255, 0) 90%
+    ),
+    lightgray;
+  background-repeat: repeat-y;
+  background-size: 50px 500px;
+  background-position: 0 0;
+
+    width: 250px;
+    height: 15px;
+    margin: 15px;
+    animation: shine 1.5s infinite;	
+}
+@keyframes shine {	
+    to {
+      background-position: 100% 0, /* move highlight to right */ 0;
+    }
+  }
